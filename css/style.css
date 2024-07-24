@@ -196,6 +196,7 @@ footer {
   color: aquamarine;
 }
 .hobby .hobby-text h3 {
+  color: rgb(167, 222, 57);
   margin-bottom: 10px;
 }
 
@@ -229,4 +230,154 @@ footer {
   margin: 10px 0 80px;
   line-height: 30px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 960px) {
+  #header {
+    width: 100%;
+    height: 80px;
+    padding: 0;
+    z-index: 1;
+  }
+  #header h1 {
+    z-index: 4;
+    position: fixed;
+    left: 20px;
+    top: 15px;
+  }
+  #header nav {
+    width: 100vw;
+    padding: 25px;
+    position: fixed;
+    top: 0;
+    left: -1000px;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.5s;
+    z-index: 4;
+  }
+  #header nav.active {
+    left: 0;
+    opacity: 1;
+  }
+  #header nav ul {
+    margin-top: 55px;
+    font-size: larger;
+  }
+  #header nav ul li {
+    margin-top: 20px;
+  }
+  #header nav ul li:nth-of-type(1) {
+    margin-top: 10px;
+  }
+  #header nav .sns {
+    margin-top: 60px;
+  }
+  #header .hamburger-btn {
+    z-index: 4;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+  #header .hamburger {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #header .hamburger span {
+    display: block;
+    height: 2px;
+    width: 40px;
+    border-radius: 30px;
+    background-color: aquamarine;
+  }
+  #header .hamburger span:nth-of-type(1) {
+    transition: transform 0.4s ease;
+    margin-top: 30px;
+  }
+  #header .hamburger span:nth-of-type(2) {
+    transition: opacity 0.6s;
+    margin-top: 10px;
+  }
+  #header .hamburger span:nth-of-type(3) {
+    transition: transform 0.4s ease;
+    margin-top: 10px;
+  }
+  #header .hamburger.active {
+    padding-top: 40px;
+  }
+  #header .hamburger.active span {
+    background-color: aquamarine;
+  }
+  #header .hamburger.active span:nth-of-type(1) {
+    position: absolute;
+    margin-top: 0;
+    transform: rotate(45deg);
+  }
+  #header .hamburger.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+  #header .hamburger.active span:nth-of-type(3) {
+    position: absolute;
+    margin-top: 0;
+    transform: rotate(-45deg);
+  }
+  #header .mask {
+    display: none;
+    transition: 0.5s;
+  }
+  #header .mask.active {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    cursor: pointer;
+    display: block;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  .container {
+    margin-left: 0px;
+  }
+  .title-white::before {
+    width: 15%;
+  }
+  .title-white::after {
+    width: 15%;
+  }
+  .under-title {
+    font-size: small;
+  }
+  footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0px;
+  }
+  .hobby {
+    margin-top: 80px;
+  }
+  .hobby .hobby-img {
+    display: none;
+  }
+  .hobby .hobby-text {
+    width: 100%;
+    height: auto;
+  }
+  .content {
+    margin-left: 0;
+  }
+  .biography {
+    width: 100%;
+    height: 70vh;
+  }
+  iframe {
+    width: 100%;
+  }
 }/*# sourceMappingURL=style.css.map */
